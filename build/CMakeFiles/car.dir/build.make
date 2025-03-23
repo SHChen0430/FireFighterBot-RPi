@@ -111,11 +111,71 @@ CMakeFiles/car.dir/motor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car.dir/motor.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/team42/CV-FireFighterBot-RPi/motor.cpp -o CMakeFiles/car.dir/motor.cpp.s
 
+CMakeFiles/car.dir/servo.cpp.o: CMakeFiles/car.dir/flags.make
+CMakeFiles/car.dir/servo.cpp.o: /home/team42/CV-FireFighterBot-RPi/servo.cpp
+CMakeFiles/car.dir/servo.cpp.o: CMakeFiles/car.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/team42/CV-FireFighterBot-RPi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/car.dir/servo.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/car.dir/servo.cpp.o -MF CMakeFiles/car.dir/servo.cpp.o.d -o CMakeFiles/car.dir/servo.cpp.o -c /home/team42/CV-FireFighterBot-RPi/servo.cpp
+
+CMakeFiles/car.dir/servo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/car.dir/servo.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/team42/CV-FireFighterBot-RPi/servo.cpp > CMakeFiles/car.dir/servo.cpp.i
+
+CMakeFiles/car.dir/servo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car.dir/servo.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/team42/CV-FireFighterBot-RPi/servo.cpp -o CMakeFiles/car.dir/servo.cpp.s
+
+CMakeFiles/car.dir/FlameSensor.cpp.o: CMakeFiles/car.dir/flags.make
+CMakeFiles/car.dir/FlameSensor.cpp.o: /home/team42/CV-FireFighterBot-RPi/FlameSensor.cpp
+CMakeFiles/car.dir/FlameSensor.cpp.o: CMakeFiles/car.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/team42/CV-FireFighterBot-RPi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/car.dir/FlameSensor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/car.dir/FlameSensor.cpp.o -MF CMakeFiles/car.dir/FlameSensor.cpp.o.d -o CMakeFiles/car.dir/FlameSensor.cpp.o -c /home/team42/CV-FireFighterBot-RPi/FlameSensor.cpp
+
+CMakeFiles/car.dir/FlameSensor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/car.dir/FlameSensor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/team42/CV-FireFighterBot-RPi/FlameSensor.cpp > CMakeFiles/car.dir/FlameSensor.cpp.i
+
+CMakeFiles/car.dir/FlameSensor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car.dir/FlameSensor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/team42/CV-FireFighterBot-RPi/FlameSensor.cpp -o CMakeFiles/car.dir/FlameSensor.cpp.s
+
+CMakeFiles/car.dir/ultrasonic.cpp.o: CMakeFiles/car.dir/flags.make
+CMakeFiles/car.dir/ultrasonic.cpp.o: /home/team42/CV-FireFighterBot-RPi/ultrasonic.cpp
+CMakeFiles/car.dir/ultrasonic.cpp.o: CMakeFiles/car.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/team42/CV-FireFighterBot-RPi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/car.dir/ultrasonic.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/car.dir/ultrasonic.cpp.o -MF CMakeFiles/car.dir/ultrasonic.cpp.o.d -o CMakeFiles/car.dir/ultrasonic.cpp.o -c /home/team42/CV-FireFighterBot-RPi/ultrasonic.cpp
+
+CMakeFiles/car.dir/ultrasonic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/car.dir/ultrasonic.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/team42/CV-FireFighterBot-RPi/ultrasonic.cpp > CMakeFiles/car.dir/ultrasonic.cpp.i
+
+CMakeFiles/car.dir/ultrasonic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car.dir/ultrasonic.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/team42/CV-FireFighterBot-RPi/ultrasonic.cpp -o CMakeFiles/car.dir/ultrasonic.cpp.s
+
+CMakeFiles/car.dir/buzzer.cpp.o: CMakeFiles/car.dir/flags.make
+CMakeFiles/car.dir/buzzer.cpp.o: /home/team42/CV-FireFighterBot-RPi/buzzer.cpp
+CMakeFiles/car.dir/buzzer.cpp.o: CMakeFiles/car.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/team42/CV-FireFighterBot-RPi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/car.dir/buzzer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/car.dir/buzzer.cpp.o -MF CMakeFiles/car.dir/buzzer.cpp.o.d -o CMakeFiles/car.dir/buzzer.cpp.o -c /home/team42/CV-FireFighterBot-RPi/buzzer.cpp
+
+CMakeFiles/car.dir/buzzer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/car.dir/buzzer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/team42/CV-FireFighterBot-RPi/buzzer.cpp > CMakeFiles/car.dir/buzzer.cpp.i
+
+CMakeFiles/car.dir/buzzer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/car.dir/buzzer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/team42/CV-FireFighterBot-RPi/buzzer.cpp -o CMakeFiles/car.dir/buzzer.cpp.s
+
 # Object files for target car
 car_OBJECTS = \
 "CMakeFiles/car.dir/main.cpp.o" \
 "CMakeFiles/car.dir/I2C.cpp.o" \
-"CMakeFiles/car.dir/motor.cpp.o"
+"CMakeFiles/car.dir/motor.cpp.o" \
+"CMakeFiles/car.dir/servo.cpp.o" \
+"CMakeFiles/car.dir/FlameSensor.cpp.o" \
+"CMakeFiles/car.dir/ultrasonic.cpp.o" \
+"CMakeFiles/car.dir/buzzer.cpp.o"
 
 # External object files for target car
 car_EXTERNAL_OBJECTS =
@@ -123,9 +183,13 @@ car_EXTERNAL_OBJECTS =
 car: CMakeFiles/car.dir/main.cpp.o
 car: CMakeFiles/car.dir/I2C.cpp.o
 car: CMakeFiles/car.dir/motor.cpp.o
+car: CMakeFiles/car.dir/servo.cpp.o
+car: CMakeFiles/car.dir/FlameSensor.cpp.o
+car: CMakeFiles/car.dir/ultrasonic.cpp.o
+car: CMakeFiles/car.dir/buzzer.cpp.o
 car: CMakeFiles/car.dir/build.make
 car: CMakeFiles/car.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/team42/CV-FireFighterBot-RPi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable car"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/team42/CV-FireFighterBot-RPi/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable car"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/car.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

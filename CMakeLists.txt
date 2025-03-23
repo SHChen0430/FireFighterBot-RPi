@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED Ture)
 
 # Add the executable
-add_executable(car main.cpp I2C.cpp motor.cpp servo.cpp) 
+add_executable(car main.cpp I2C.cpp motor.cpp servo.cpp FlameSensor.cpp ultrasonic.cpp buzzer.cpp) 
 
 # Link with i2c library if needed
-target_link_libraries(car wiringPi)
+target_link_libraries(car gpiod)

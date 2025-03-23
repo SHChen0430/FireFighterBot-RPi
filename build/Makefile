@@ -129,6 +129,30 @@ car/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/build
 .PHONY : car/fast
 
+FlameSensor.o: FlameSensor.cpp.o
+.PHONY : FlameSensor.o
+
+# target to build an object file
+FlameSensor.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/FlameSensor.cpp.o
+.PHONY : FlameSensor.cpp.o
+
+FlameSensor.i: FlameSensor.cpp.i
+.PHONY : FlameSensor.i
+
+# target to preprocess a source file
+FlameSensor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/FlameSensor.cpp.i
+.PHONY : FlameSensor.cpp.i
+
+FlameSensor.s: FlameSensor.cpp.s
+.PHONY : FlameSensor.s
+
+# target to generate assembly for a file
+FlameSensor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/FlameSensor.cpp.s
+.PHONY : FlameSensor.cpp.s
+
 I2C.o: I2C.cpp.o
 .PHONY : I2C.o
 
@@ -152,6 +176,30 @@ I2C.s: I2C.cpp.s
 I2C.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/I2C.cpp.s
 .PHONY : I2C.cpp.s
+
+buzzer.o: buzzer.cpp.o
+.PHONY : buzzer.o
+
+# target to build an object file
+buzzer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/buzzer.cpp.o
+.PHONY : buzzer.cpp.o
+
+buzzer.i: buzzer.cpp.i
+.PHONY : buzzer.i
+
+# target to preprocess a source file
+buzzer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/buzzer.cpp.i
+.PHONY : buzzer.cpp.i
+
+buzzer.s: buzzer.cpp.s
+.PHONY : buzzer.s
+
+# target to generate assembly for a file
+buzzer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/buzzer.cpp.s
+.PHONY : buzzer.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -201,6 +249,54 @@ motor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/motor.cpp.s
 .PHONY : motor.cpp.s
 
+servo.o: servo.cpp.o
+.PHONY : servo.o
+
+# target to build an object file
+servo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/servo.cpp.o
+.PHONY : servo.cpp.o
+
+servo.i: servo.cpp.i
+.PHONY : servo.i
+
+# target to preprocess a source file
+servo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/servo.cpp.i
+.PHONY : servo.cpp.i
+
+servo.s: servo.cpp.s
+.PHONY : servo.s
+
+# target to generate assembly for a file
+servo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/servo.cpp.s
+.PHONY : servo.cpp.s
+
+ultrasonic.o: ultrasonic.cpp.o
+.PHONY : ultrasonic.o
+
+# target to build an object file
+ultrasonic.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/ultrasonic.cpp.o
+.PHONY : ultrasonic.cpp.o
+
+ultrasonic.i: ultrasonic.cpp.i
+.PHONY : ultrasonic.i
+
+# target to preprocess a source file
+ultrasonic.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/ultrasonic.cpp.i
+.PHONY : ultrasonic.cpp.i
+
+ultrasonic.s: ultrasonic.cpp.s
+.PHONY : ultrasonic.s
+
+# target to generate assembly for a file
+ultrasonic.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/car.dir/build.make CMakeFiles/car.dir/ultrasonic.cpp.s
+.PHONY : ultrasonic.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,15 +306,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... car"
+	@echo "... FlameSensor.o"
+	@echo "... FlameSensor.i"
+	@echo "... FlameSensor.s"
 	@echo "... I2C.o"
 	@echo "... I2C.i"
 	@echo "... I2C.s"
+	@echo "... buzzer.o"
+	@echo "... buzzer.i"
+	@echo "... buzzer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
 	@echo "... motor.o"
 	@echo "... motor.i"
 	@echo "... motor.s"
+	@echo "... servo.o"
+	@echo "... servo.i"
+	@echo "... servo.s"
+	@echo "... ultrasonic.o"
+	@echo "... ultrasonic.i"
+	@echo "... ultrasonic.s"
 .PHONY : help
 
 
