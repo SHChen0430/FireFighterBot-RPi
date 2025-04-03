@@ -11,7 +11,7 @@ public:
 
     void on();      // 打开蜂鸣器
     void off();     // 关闭蜂鸣器
-    void beep(int times = 1, int duration_ms = 200, int interval_ms = 200); // 响若干次
+    void beep(int times, int duration_ms, int interval_ms, int freq_hz); // 响若干次
 
 private:
     struct gpiod_chip* chip;

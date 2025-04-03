@@ -19,7 +19,7 @@ std::atomic<bool> obstacleDetected(false);
 void monitorObstacle(Ultrasonic& ultrasonic) {
     while (true) {
         double dist = ultrasonic.read();
-        if (dist != -1 && dist < 10) {
+        if (dist != -1 && dist < 15) {
             obstacleDetected = true;
         }
         usleep(100000); // Check every 100ms
@@ -29,16 +29,18 @@ void monitorObstacle(Ultrasonic& ultrasonic) {
 // Slight obstacle avoidance behavior
 void avoidObstacle(Buzzer& buzzer,Motor& motor, Servo& car) {
     std::cout << "🚧 遇到障碍物：开始规避" << std::endl;
-    buzzer.on();
+    buzzer.beep(1, 300, 200, 1000);
     // Stop and steer right slightly
     motor.stop();
     usleep(200000);
-    buzzer.off();
+    
     car.setAngle(35);         // Turn wheels to the right
     usleep(300000);
-    buzzer.on();
+    buzzer.beep(1, 300, 200, 1000);
     motor.backward();         // Move backward briefly
-    sleep(1);
+    usleep(500000);
+    buzzer.beep(1, 300, 200, 1000);
+    usleep(200000);
     motor.stop();
     buzzer.off();
     usleep(200000);
@@ -62,11 +64,11 @@ void safeForward(Buzzer& buzzer,FlameSensor& sensor,Motor& motor, Servo& car, in
             std::cout << "🔥 检测到火焰!" << std::endl;
 
             motor.stop();
-            usleep(500000);
-
+            //usleep(500000);
+            buzzer.beep(1, 300, 200, 1000);
             car.setAngle(5);
-            usleep(500000);
-
+            //usleep(500000);
+            buzzer.beep(1, 300, 200, 1000);
             flag=1;
         }else if(!flame){
             flag=0;
@@ -76,7 +78,8 @@ void safeForward(Buzzer& buzzer,FlameSensor& sensor,Motor& motor, Servo& car, in
         
 
         if(flag==1){
-            buzzer.on();
+            buzzer.beep(1, 300, 200, 1000);
+            usleep(500000);
         }
     }
 
@@ -99,21 +102,20 @@ int main() {
     std::thread obstacleThread(monitorObstacle, std::ref(ultrasonic));
 
     buzzer.off();
-
+    
     while (true) {
-        
-            std::cout << "🌀 未检测到火焰，继续搜索..." << std::endl;
+        std::cout << "🌀 未检测到火焰，继续搜索..." << std::endl;
 
-            // Move forward with obstacle interrupt handling
-            safeForward(buzzer, sensor, motor, Car, 3000);
+        // Move forward with obstacle interrupt handling
+        safeForward(buzzer, sensor, motor, Car, 3000);
 
-            // Scan area a bit
-            Car.setAngle(35);
-            usleep(500000);
-            motor.backward();
-            sleep(1);
-            motor.stop();
-            Car.setAngle(5);
+        // Scan area a bit
+        Car.setAngle(35);
+        usleep(500000);
+        motor.backward();
+        sleep(1);
+        motor.stop();
+        Car.setAngle(5);
     }
 
     // Clean up thread

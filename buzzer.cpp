@@ -36,11 +36,18 @@ void Buzzer::off() {
     gpiod_line_set_value(line, 0);
 }
 
-void Buzzer::beep(int times, int duration_ms, int interval_ms) {
-    for (int i = 0; i < times; ++i) {
-        on();
-        usleep(duration_ms * 1000);
-        off();
+void Buzzer::beep(int times, int duration_ms, int interval_ms, int freq_hz) {
+    int period_us = 1000000 / freq_hz;         // 周期，例如 1000Hz = 1000us
+    int half_period_us = period_us / 2;
+    int cycles = (duration_ms * 1000) / period_us;
+
+    for (int t = 0; t < times; ++t) {
+        for (int i = 0; i < cycles; ++i) {
+            gpiod_line_set_value(line, 1);
+            usleep(half_period_us);
+            gpiod_line_set_value(line, 0);
+            usleep(half_period_us);
+        }
         usleep(interval_ms * 1000);
     }
 }
