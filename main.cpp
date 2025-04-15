@@ -71,10 +71,10 @@ void safeForward(Buzzer& buzzer,FlameSensor& sensor,Motor& motor, Servo& car, in
             motor.forward();
         }else if(flame){
             std::cout << "🔥 检测到火焰!" << std::endl;
-            takePhoto();
             motor.stop();
             //usleep(500000);
             buzzer.beep(1, 300, 200, 1000);
+            takePhoto();
             car.setAngle(5);
             //usleep(500000);
             buzzer.beep(1, 300, 200, 1000);
