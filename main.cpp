@@ -9,6 +9,7 @@
 #include <thread>
 #include <atomic>
 #include <unistd.h>
+#include <cstdlib>
 
 int flag=0;
 
@@ -24,6 +25,14 @@ void monitorObstacle(Ultrasonic& ultrasonic) {
         }
         usleep(100000); // Check every 100ms
     }
+}
+
+void takePhoto(){
+    static int photoCount=0;
+    std::string filename = "/home/team42/flame/fire_photo_" + std::to_string(photoCount++) + ".jpg";
+    std::string cmd  ="libcamera-still -o " + filename + " --nopreview -t 1000";
+    system(cmd.c_str());
+    std::cout << "🚧 拍摄火焰照片" << std::endl;
 }
 
 // Slight obstacle avoidance behavior
@@ -62,7 +71,7 @@ void safeForward(Buzzer& buzzer,FlameSensor& sensor,Motor& motor, Servo& car, in
             motor.forward();
         }else if(flame){
             std::cout << "🔥 检测到火焰!" << std::endl;
-
+            takePhoto();
             motor.stop();
             //usleep(500000);
             buzzer.beep(1, 300, 200, 1000);
@@ -88,7 +97,7 @@ void safeForward(Buzzer& buzzer,FlameSensor& sensor,Motor& motor, Servo& car, in
 
 int main() {
     I2C i2c("/dev/i2c-1", 0x14);
-    Motor motor(i2c, 0, 23, 24, 13, 12);
+    Motor motor(i2c, 0, 23, 24, 13, 12, 3);
     FlameSensor sensor("gpiochip0", 4);
     Ultrasonic ultrasonic("gpiochip0", 27, 22);
     Buzzer buzzer;
@@ -96,7 +105,6 @@ int main() {
     Servo Car(i2c, 2);
     Servo CameraH(i2c, 0);
     Servo CameraV(i2c, 1);
-
 
     // Start background thread for obstacle detection
     std::thread obstacleThread(monitorObstacle, std::ref(ultrasonic));

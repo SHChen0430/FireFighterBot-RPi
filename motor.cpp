@@ -2,8 +2,8 @@
 #include <iostream>
 #include <unistd.h>  // for usleep
 
-Motor::Motor(I2C& i2c_device, int gpio_chip, int p1, int p2, uint8_t ch1, uint8_t ch2)
-    : i2c(i2c_device), pwmChannel1(ch1), pwmChannel2(ch2) {
+Motor::Motor(I2C& i2c_device, int gpio_chip, int p1, int p2, uint8_t ch1, uint8_t ch2, uint8_t ch3)
+    : i2c(i2c_device), pwmChannel1(ch1), pwmChannel2(ch2), pwmChannel3(ch3) {
    
     chip = gpiod_chip_open_by_number(gpio_chip);
     if (!chip) {
@@ -70,4 +70,9 @@ void Motor::leftspin() {
     i2c.writeRegister(0x40, 50);
     i2c.writeRegister(0x20 + pwmChannel1, 1500);
     i2c.writeRegister(0x20 + pwmChannel2, 1500);
+}
+
+void Motor::fan() {
+    i2c.writeRegister(0x40, 1000);
+    i2c.writeRegister(0x20 + pwmChannel3, 1500);
 }
