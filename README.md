@@ -18,12 +18,19 @@ Traditional fire prevention and control measures such as fire alarms and manual 
 4. Complete operation documentation: It includes complete README documentation and build instructions, suitable for deployment in different system environments.
 5. Encourage community participation: Developers are welcome to Fork this project and add custom recognition models, flame level discrimination, or multi-vehicle collaboration logic, etc.
 
+✅Software structure module：
+The system adopts a modular C++ design, and the main functional units are as follows:
+1.Flame recognition module: Uses a flame sensor to identify flames;
+2.Control logic module: The main logic loop judges the current state and schedules behaviors such as obstacle avoidance and flame detection.
+3.Drive module: Based on the GPIO interface, it drives various types of motors, buzzers and other actuating devices;
+4.Status management module: Maintain the consistency of system status, including whether it is in forward, obstacle avoidance, fire extinguishing, alarm and other states.
+
 ✅ Hardware Requirements
 ![image](https://github.com/user-attachments/assets/f6bdd30b-2a96-474b-b4fc-489d554d57f5)
 Intelligent car
 ![image](https://github.com/user-attachments/assets/72946f33-ee36-4dc1-a404-242dea7bbdf2)
 ultrasonic sensor
-<img width="312" alt="image" src="https://github.com/user-attachments/assets/1ce912fe-b1b1-477b-84a3-37600623a200" />
+![image](https://github.com/user-attachments/assets/37656e9f-9959-49ba-bf83-bb83c6dc51ac)
 CSI camera
 ![image](https://github.com/user-attachments/assets/262eff8a-5ad0-4b81-ae05-9705f50d4488)
 Flame Sensor
