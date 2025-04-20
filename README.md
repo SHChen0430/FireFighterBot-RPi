@@ -36,6 +36,7 @@ CSI camera
 Flame Sensor
 ![image](https://github.com/user-attachments/assets/6aa6dfd4-c236-4a21-8518-3eddd9596395)
 Buzzer
+
 Besides, we connected them together with two TT motors, three servo motors, a battery pack, and a bunch of "beautiful messy" wires!
 
 ✅ How is works
