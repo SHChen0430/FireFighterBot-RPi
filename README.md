@@ -12,23 +12,33 @@ Traditional fire prevention and control measures such as fire alarms and manual 
 💡Project innovation points
 
 1. Use intelligent small vehicles to inspect flames: It reduces human resource consumption to a greater extent and can identify small flames more quickly than traditional flame alarm systems, effectively preventing fires from the source
+
 2. Intelligent path inspection mechanism: By simulating the manual inspection actions through the process of moving forward - turning - reversing - moving forward again, the vehicle can autonomously cover a large area, effectively reducing the dead corner rate
+
 3. Clear priority of control logic: The obstacle avoidance logic has the highest priority to ensure operational safety. Flame detection is only effective when moving forward, saving computing resources
 
 🙌Replicable design
 
 1.To encourage the promotion and replication of this project in education, scientific research or practical engineering, we have particularly strengthened the engineering reproducibility design in the following aspects;
+
 2. The project directory is clear and the annotations are complete: The source code structure is modular and the annotations are detailed, which is convenient for others to understand and reuse.
+
 3. Standardization of hardware selection: All sensors and actuating devices are universal models for e-commerce platforms, avoiding supply challenges.
+
 4. Complete operation documentation: It includes complete README documentation and build instructions, suitable for deployment in different system environments.
+
 5. Encourage community participation: Developers are welcome to Fork this project and add custom recognition models, flame level discrimination, or multi-vehicle collaboration logic, etc.
 
 ✅Software structure module
 
 The system adopts a modular C++ design, and the main functional units are as follows:
+
 1.Flame recognition module: Uses a flame sensor to identify flames;
+
 2.Control logic module: The main logic loop judges the current state and schedules behaviors such as obstacle avoidance and flame detection.
+
 3.Drive module: Based on the GPIO interface, it drives various types of motors, buzzers and other actuating devices;
+
 4.Status management module: Maintain the consistency of system status, including whether it is in forward, obstacle avoidance, fire extinguishing, alarm and other states.
 
 ✅ Hardware Requirements
@@ -49,51 +59,80 @@ Besides, we connected them together with two TT motors, three servo motors, a ba
 ✅ How is works
 
 1.The car is in the default forward state
+
 2. If an obstacle (ultrasonic) is detected → immediately enter the obstacle avoidance process:
 Control the turning Angle → reverse → Move forward again, and resume the main process (main function)
+
 3. If a flame is detected (only valid in the forward state) :
 Stop moving → Activate the buzzer → The camera takes real-time photos of the scene → Upload the images to the cloud (can be connected to other systems) → Get remote alerts through the photos to avoid false alarms
+
 4. If there is no flame after moving forward for a while:
 Active inspection that follows the preset logic to turn + reverse → continue moving forward → form a fan-shaped or spiral area
 Obstacle avoidance logic has the highest priority and is only triggered in the forward state, followed by flame detection, and finally regular inspection
 
 📂 Project Structure
 
-FireFighterBot-RPi/
+FireFighterBot-RPi
+
 ├── .vscode/              # VSCode workspace settings
+
 ├── build/                # Compiled binaries and build outputs (v1.00)
+
 ├── CMakeLists.txt        # CMake build configuration file
+
 ├── FlameSensor.cpp       # Logic to read and process flame sensor data
+
 ├── FlameSensor.h         # Flame sensor function declarations
+
 ├── I2C.cpp               # Implementation for I2C communication
+
 ├── I2C.h                 # I2C interface header
+
 ├── buzzer.cpp            # Controls the buzzer (for alerts)
+
 ├── buzzer.h              # Buzzer control function declarations
+
 ├── main.cpp              # Main patrol logic and system control (v1.01)
+
 ├── motor.cpp             # DC motor control logic
+
 ├── motor.h               # Motor driver header
+
 ├── servo.cpp             # Servo motor steering control logic
+
 ├── servo.h               # Servo control declarations
+
 ├── ultrasonic.cpp        # Ultrasonic sensor handling
+
 ├── ultrasonic.h          # Header for ultrasonic distance logic
 
 ▶️ Run
 
 This project uses CMake for building. Please follow the steps below:
+
 Step 1: Go into the build directory 
+
 cd build 
+
 Step 2: Run CMake to generate Makefiles 
+
 cmake .. 
+
 Step 3: Compile the project 
+
 make 
+
 Step 4: Run the executable (requires sudo for GPIO access) 
+
 sudo ./car 
 
 🧩 Social Media
 
 Here is our youtubu link and bilibili link, where we documented the process of completing the entire project.
+
 youtubu：https://youtu.be/xD0HRMBRjAI
-bilibili：【Autonomous Patrol Fire Detection Vehicles - FireFighterBot-PRI】 https://www.bilibili.com/video/BV1Do58zdEHr/?share_source=copy_web&vd_source=3f262d99275a4ff1f67faab678661e16
+
+bilibili：【Autonomous Patrol Fire Detection Vehicles - FireFighterBot-PRI】 https://www.bilibili.com/video/BV1Do58zdEHr/share_source=copy_web&vd_source=3f262d99275a4ff1f67faab678661e16
 
 📝 License
 
