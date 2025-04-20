@@ -92,6 +92,7 @@ FireFighterBot-RPi
 ├── servo.h               # Servo control declarations
 ├── ultrasonic.cpp        # Ultrasonic sensor handling
 ├── ultrasonic.h          # Header for ultrasonic distance logic
+```
 
 ▶️ Run
 
