@@ -69,13 +69,13 @@ FireFighterBot-RPi/
 
 ▶️ Run
 This project uses CMake for building. Please follow the steps below:
-# Step 1: Go into the build directory 
+Step 1: Go into the build directory 
 cd build 
-# Step 2: Run CMake to generate Makefiles 
+Step 2: Run CMake to generate Makefiles 
 cmake .. 
-# Step 3: Compile the project 
+Step 3: Compile the project 
 make 
-# Step 4: Run the executable (requires sudo for GPIO access) 
+Step 4: Run the executable (requires sudo for GPIO access) 
 sudo ./car 
 
 🧩 Social Media
