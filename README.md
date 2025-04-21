@@ -15,18 +15,6 @@ Traditional fire prevention and control measures such as fire alarms and manual 
 
 3. Clear priority of control logic: The obstacle avoidance logic has the highest priority to ensure operational safety. Flame detection is only effective when moving forward, saving computing resources
 
-## 🙌Replicable design
-
-1. To encourage the promotion and replication of this project in education, scientific research or practical engineering, we have particularly strengthened the engineering reproducibility design in the following aspects;
-
-2. The project directory is clear and the annotations are complete: The source code structure is modular and the annotations are detailed, which is convenient for others to understand and reuse.
-
-3. Standardization of hardware selection: All sensors and actuating devices are universal models for e-commerce platforms, avoiding supply challenges.
-
-4. Complete operation documentation: It includes complete README documentation and build instructions, suitable for deployment in different system environments.
-
-5. Encourage community participation: Developers are welcome to Fork this project and add custom recognition models, flame level discrimination, or multi-vehicle collaboration logic, etc.
-
 ### ✅Software structure module
 
 The system adopts a modular C++ design, and the main functional units are as follows:
@@ -122,7 +110,5 @@ Bilibili：https://www.bilibili.com/video/BV1Do58zdEHr/share_source=copy_web&vd_
 
 MIT License © 2025 FireFighterBot-RPi Project Contributors. See LICENSE for details.
 
-
-
-
-
+All sensors and actuating devices are universal models for e-commerce platforms, avoiding supply challenges.
+Developers are welcome to Fork this project and add custom recognition models, flame level discrimination, or multi-vehicle collaboration logic, etc.
