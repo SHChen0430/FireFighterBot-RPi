@@ -1,5 +1,5 @@
 # 🚒FireFighterBot-RPi
-
+![image](https://github.com/user-attachments/assets/f6bdd30b-2a96-474b-b4fc-489d554d57f5)
 ## 📌Project Description
 
 This project is an intelligent vehicle used for autonomous inspection, automatically identifying fire sources and sounding alarms. This car uses a Raspberry PI and a flame sensor, and combines obstacle detection and basic alarm mechanisms. The automatic operation of this system can be applied to daily automated inspection tasks.
@@ -41,16 +41,14 @@ The system adopts a modular C++ design, and the main functional units are as fol
 
 ### ✅ Hardware Requirements
 
-![image](https://github.com/user-attachments/assets/f6bdd30b-2a96-474b-b4fc-489d554d57f5)
-#### Intelligent car
-![image](https://github.com/user-attachments/assets/72946f33-ee36-4dc1-a404-242dea7bbdf2)
 #### ultrasonic sensor
-![image](https://github.com/user-attachments/assets/37656e9f-9959-49ba-bf83-bb83c6dc51ac)
+![image](https://github.com/user-attachments/assets/72946f33-ee36-4dc1-a404-242dea7bbdf2)
 #### CSI camera
-![image](https://github.com/user-attachments/assets/262eff8a-5ad0-4b81-ae05-9705f50d4488)
+![image](https://github.com/user-attachments/assets/37656e9f-9959-49ba-bf83-bb83c6dc51ac)
 #### Flame Sensor
-![image](https://github.com/user-attachments/assets/6aa6dfd4-c236-4a21-8518-3eddd9596395)
+![image](https://github.com/user-attachments/assets/262eff8a-5ad0-4b81-ae05-9705f50d4488)
 #### Buzzer
+![image](https://github.com/user-attachments/assets/6aa6dfd4-c236-4a21-8518-3eddd9596395)
 
 Besides, we connected them together with two TT motors, three servo motors, a battery pack, and a bunch of "beautiful messy" wires!
 
