@@ -101,11 +101,11 @@ sudo ./car
 ## 🧩 Social Media
 
 Here is our youtubu link and bilibili link, where we documented the process of completing the entire project.
-```bash
-Youtubu：https://youtu.be/xD0HRMBRjAI
 
-Bilibili：https://www.bilibili.com/video/BV1Do58zdEHr/share_source=copy_web&vd_source=3f262d99275a4ff1f67faab678661e16
-```
+Youtubu：`https://youtu.be/xD0HRMBRjAI`
+
+Bilibili：`https://www.bilibili.com/video/BV1Do58zdEHr/`
+
 ## 📝 License
 
 MIT License © 2025 FireFighterBot-RPi Project Contributors. See LICENSE for details.
